@@ -21,11 +21,11 @@ def execute():
     if update=="Y":
         for tool in update:
             if shutil.which(tool):
-                for cmds in toll:
+                for cmds in tool:
                     subprocess.run(cmds)
     for tool in clean:
         if shutil.which(tool):
-            for cmds in toll:
+            for cmds in tool:
                 subprocess.run(cmds)
     
 execute()
