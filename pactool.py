@@ -15,10 +15,10 @@ clean = {
     "flatpak": [["flatpak", "uninstall", "--unused", "-y"]]
 }
 
-update=input("would you like to update now?[Y/n]").lower()
+qupdate=input("would you like to update now?[Y/n]").lower()
 
 def execute():
-    if update=="y":
+    if qupdate=="y":
         for tool in update:
             if shutil.which(tool):
                 for cmds in update[tool]:
