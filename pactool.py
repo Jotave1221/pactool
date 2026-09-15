@@ -18,7 +18,7 @@ clean = {
 update=input("would you like to update now?[Y/n]").lower()
 
 def execute():
-    if update==Y:
+    if update=="Y":
         for tool in update:
             if shutil.which(tool):
                 for cmds in toll:
