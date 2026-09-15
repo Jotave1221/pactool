@@ -18,14 +18,14 @@ clean = {
 update=input("would you like to update now?[Y/n]").lower()
 
 def execute():
-    if update=="Y":
+    if update=="y":
         for tool in update:
             if shutil.which(tool):
-                for cmds in tool:
+                for cmds in update[tool]:
                     subprocess.run(cmds)
     for tool in clean:
         if shutil.which(tool):
-            for cmds in tool:
+            for cmds in clean[tool]:
                 subprocess.run(cmds)
     
 execute()
