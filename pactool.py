@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import shutil
 import subprocess
 
@@ -18,7 +20,7 @@ clean = {
 qupdate=input("would you like to update now?[Y/n]").lower()
 
 def execute():
-    if qupdate=="y":
+    if qupdate=="y" or qupdate=="":
         for tool in update:
             if shutil.which(tool):
                 for cmds in update[tool]:
